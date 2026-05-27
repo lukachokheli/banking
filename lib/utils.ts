@@ -133,28 +133,39 @@ export function getAccountTypeColors(type: AccountTypes) {
 export function countTransactionCategories(
   transactions: Transaction[]
 ): CategoryCount[] {
+
+  const normalizeCategory = (category: string) => {
+    const formatted = category
+      .replace(/_/g, " ")
+      .toLowerCase()
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+
+    if (formatted.includes("Transfer")) return "Transfer";
+    if (formatted.includes("Payment")) return "Payment";
+    if (formatted.includes("Food")) return "Food And Drink";
+    if (formatted.includes("General Merchandise")) return "Food And Drink";
+    if (formatted.includes("Transportation")) return "Travel";
+
+    return formatted;
+  };
+
   const categoryCounts: { [category: string]: number } = {};
   let totalCount = 0;
 
-  // Iterate over each transaction
-  transactions &&
-    transactions.forEach((transaction) => {
-      // Extract the category from the transaction
-      const category = transaction.category;
+  transactions?.forEach((transaction) => {
+    const normalizedCategory = normalizeCategory(
+      transaction.category || "Other"
+    );
 
-      // If the category exists in the categoryCounts object, increment its count
-      if (categoryCounts.hasOwnProperty(category)) {
-        categoryCounts[category]++;
-      } else {
-        // Otherwise, initialize the count to 1
-        categoryCounts[category] = 1;
-      }
+    if (categoryCounts.hasOwnProperty(normalizedCategory)) {
+      categoryCounts[normalizedCategory]++;
+    } else {
+      categoryCounts[normalizedCategory] = 1;
+    }
 
-      // Increment total count
-      totalCount++;
-    });
+    totalCount++;
+  });
 
-  // Convert the categoryCounts object to an array of objects
   const aggregatedCategories: CategoryCount[] = Object.keys(categoryCounts).map(
     (category) => ({
       name: category,
@@ -163,7 +174,6 @@ export function countTransactionCategories(
     })
   );
 
-  // Sort the aggregatedCategories array by count in descending order
   aggregatedCategories.sort((a, b) => b.count - a.count);
 
   return aggregatedCategories;
