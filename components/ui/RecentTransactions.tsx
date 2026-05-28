@@ -57,7 +57,7 @@ const RecentTransactions = ({
                     appwriteItemId={appwriteItemId}
                     type="full"
                 />
-    
+      
                 <TransactionsTable transactions={currentTransactions} />
 
                 {totalPages > 1 && ( 

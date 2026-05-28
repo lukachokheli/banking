@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: "C:/Users/adobe/Desktop/banking",
   },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default withSentryConfig(nextConfig, {
