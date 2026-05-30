@@ -44,17 +44,16 @@
 }
 
 @layer utilities {
- 
   .input-class {
-    @apply text-[16px] leading-[24px] placeholder:text-[16px] rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-500;
+    @apply text-16 placeholder:text-16 rounded-lg border border-gray-300 text-gray-900 placeholder:text-gray-500;
   }
 
   .sheet-content button {
-    @apply focus:ring-0 focus-visible:ring-transparent focus:ring-offset-0 focus-visible:ring-offset-0 focus-visible:outline-none focus-visible:border-none;
+    @apply focus:ring-0 focus-visible:ring-transparent focus:ring-offset-0 focus-visible:ring-offset-0 focus-visible:outline-none focus-visible:border-none !important;
   }
 
   .text14_padding10 {
-    @apply text-[14px] leading-[20px] px-4 py-2.5 font-semibold;
+    @apply text-14 px-4 py-2.5 font-semibold;
   }
 
   .flex-center {
@@ -62,7 +61,7 @@
   }
 
   .header-2 {
-    @apply text-[18px] leading-[22px] font-semibold text-gray-900;
+    @apply text-18 font-semibold text-gray-900;
   }
 
   .text-10 {
@@ -77,9 +76,9 @@
     @apply text-[14px] leading-[20px];
   }
 
-   .text-16 {
+  .text-16 {
     @apply text-[16px] leading-[24px];
-  } 
+  }
 
   .text-18 {
     @apply text-[18px] leading-[22px];
@@ -107,11 +106,11 @@
 
   /* Home */
   .home {
-    @apply flex w-full flex-row max-xl:max-h-screen max-xl:overflow-y-scroll;
+    @apply no-scrollbar flex w-full flex-row max-xl:max-h-screen max-xl:overflow-y-scroll;
   }
 
   .home-content {
-    @apply flex w-full flex-1 flex-col gap-8 px-5 sm:px-8 py-7 lg:py-12 xl:max-h-screen xl:overflow-y-scroll;
+    @apply no-scrollbar flex w-full flex-1 flex-col gap-8 px-5 sm:px-8 py-7 lg:py-12 xl:max-h-screen xl:overflow-y-scroll;
   }
 
   .home-header {
@@ -156,7 +155,7 @@
 
   /* Right sidebar */
   .right-sidebar {
-    @apply no-scrollbar hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[355px] xl:overflow-y-scroll;
+    @apply no-scrollbar hidden h-screen max-h-screen flex-col border-l border-gray-200 xl:flex w-[355px] xl:overflow-y-scroll !important;
   }
 
   .profile-banner {
@@ -168,7 +167,7 @@
   }
 
   .profile-img {
-    @apply flex items-center justify-center absolute -top-8 size-24 rounded-full bg-gray-100 border-8 border-white p-2 shadow-profile;
+    @apply flex-center absolute -top-8 size-24 rounded-full bg-gray-100 border-8 border-white p-2 shadow-profile;
   }
 
   .profile-details {
@@ -206,7 +205,7 @@
   }
 
   .transactions-account-balance {
-    @apply flex items-center justify-center flex-col gap-2 rounded-md bg-blue-25/20 px-4 py-2 text-white;
+    @apply flex-center flex-col  gap-2 rounded-md bg-blue-25/20 px-4 py-2 text-white;
   }
 
   .header-box {
@@ -241,7 +240,7 @@
 
   /* Category Badge */
   .category-badge {
-    @apply flex items-center justify-center truncate w-fit gap-1 rounded-2xl border-[1.5px] py-[2px] pl-1.5 pr-2;
+    @apply flex-center truncate w-fit gap-1 rounded-2xl border-[1.5px] py-[2px] pl-1.5 pr-2;
   }
 
   .banktab-item {
@@ -293,7 +292,7 @@
   }
 
   .form-btn {
-    @apply  text-16 rounded-lg border border-bankGradient bg-bank-gradient font-semibold text-white shadow-form;
+    @apply text-16 rounded-lg border border-bankGradient bg-bank-gradient font-semibold text-white shadow-form;
   }
 
   .form-link {
@@ -322,7 +321,7 @@
   }
 
   .payment-transfer_btn {
-    @apply text-14 w-full bg-bank-gradient font-semibold text-white shadow-form;
+    @apply text-14 w-full bg-bank-gradient font-semibold text-white shadow-form !important;
   }
 
   /* Root Layout */
@@ -358,10 +357,6 @@
 
   .footer_image {
     @apply relative size-5 max-xl:w-full max-xl:flex max-xl:justify-center max-xl:items-center;
-  }
-
-  .footer_image-mobile {
-    @apply relative size-5;
   }
 
   /* Sidebar */
