@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Banking App
 
-## Getting Started
+A modern banking web application built with Next.js, TypeScript, Tailwind CSS, Appwrite, Plaid, Dwolla, Sentry, and Vercel.
 
-First, run the development server:
+The application allows users to securely connect bank accounts, view balances, track transaction history, transfer funds, and manage financial activity through a responsive dashboard interface.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[View Live Project](https://banking-lilac-alpha.vercel.app/)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Note: The application uses Plaid Sandbox for testing. See the Demo Access section below for test credentials.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Demo Access
 
-## Learn More
+The application uses Plaid Sandbox for testing purposes.
 
-To learn more about Next.js, take a look at the following resources:
+After creating an account, connect a test bank account using the Plaid Sandbox credentials:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* Username: `user_good`
+* Password: `pass_good`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+You may also be prompted for test verification codes provided by Plaid Sandbox during the connection process.
 
-## Deploy on Vercel
+Once connected, you can explore account balances, transaction history, and fund transfer functionality.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Tech Stack
+
+* Next.js
+* React
+* TypeScript
+* Tailwind CSS
+* shadcn/ui
+* Appwrite
+* Plaid
+* Dwolla
+* Sentry
+* Chart.js
+* Vercel
+
+## Features
+
+* Secure user authentication and onboarding
+* Bank account connection with Plaid
+* Account balance overview
+* Financial data visualization with charts and analytics
+* Transaction history
+* Secure fund transfer functionality
+* Responsive dashboard UI
+* Error tracking with Sentry
+* Backend service integration with Appwrite
+* Deployed on Vercel
+
+## Screenshots
+Below are some screenshots showcasing the application's authentication flow, dashboard, account management, transaction history, and fund transfer functionality.
+
+### Sign In
+
+![Sign In](public/screenshots/sign-in.png)
+
+### Dashboard
+
+![Dashboard](public/screenshots/homepage.png)
+
+### My Banks
+
+![My Banks](public/screenshots/mybanks.png)
+
+### Transaction History
+
+![Transactions](public/screenshots/transactionhistory.png)
+
+### Transfer Funds
+
+![Transfer](public/screenshots/transfer.png)
+
+### Add Bank Account
+
+![Add Bank](public/screenshots/addbank.png)
+
+## What I Learned
+
+While building this project, I gained experience with:
+
+* Building a full Next.js application structure
+* Working with TypeScript in a real project
+* Creating reusable UI components
+* Using Appwrite for backend services
+* Integrating third-party APIs like Plaid and Dwolla
+* Deploying a production project with Vercel
+* Tracking errors with Sentry
+* Building responsive layouts with Tailwind CSS
+
+## Project Status
+
+This project was built as a learning project to improve my skills with modern frontend development, backend-service integration, authentication, API handling, and deployment.
+
+## Author
+
+Luka Chokheli
+GitHub: [@lukachokheli](https://github.com/lukachokheli)
